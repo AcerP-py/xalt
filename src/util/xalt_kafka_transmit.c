@@ -130,7 +130,6 @@ int main (int argc, char **argv) {
         return 1;
     }
 
-    fprintf(stderr, "KAFKA_TIMEOUT = %d\n", KAFKA_TIMEOUT);
     err = rd_kafka_flush(producer, KAFKA_TIMEOUT);
 
     if (err != RD_KAFKA_RESP_ERR_NO_ERROR) {
