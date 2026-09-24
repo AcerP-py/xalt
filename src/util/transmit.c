@@ -134,6 +134,7 @@ void transmit(const char* transmission, const char* jsonStr, const char* kind, c
       // Prepend $LIB64 to $LD_LIBRARY_PATH
       int  i;
       char *ld_lib_path = xalt_getenv("LD_LIBRARY_PATH");
+      if (ld_lib_path == NULL) ld_lib_path = "";
       char *lib64_dir   = xalt_dir("lib64");
       int  len_lpath    = strlen(ld_lib_path);
       int  len_l64dir   = strlen(lib64_dir);
